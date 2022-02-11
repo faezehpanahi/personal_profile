@@ -1,0 +1,564 @@
+@font-face {
+  font-family: "koodak";
+  src: url("../font/KoodakB.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* global style */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 20px;
+  box-sizing: border-box;
+  /* background-color: rgb(96, 94, 209); */
+  font-family: "koodak";
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+tr {
+  width: 100%;
+}
+
+h1 {
+  color: #e0b96f;
+  font-size: 2rem;
+  margin: 0 0 20px;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 4.4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  /* background-color: rgb(159, 235, 193); */
+}
+
+.nav-brand {
+  width: 3.5rem;
+}
+
+.container img {
+  border-radius: 25px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  direction: ltr;
+}
+
+.menu-icons i {
+  font-size: 1.5rem;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+.close {
+  margin-top: 1rem;
+}
+
+.close i {
+  color: #eb648c;
+}
+
+.nav-list {
+  width: 10rem;
+  height: 100vh;
+  background-color: #d7d4ed;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* z-index: 1; */
+  transition: all 650ms ease-in-out;
+}
+
+.nav-list.active {
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  left: 1.5rem;
+  top: 1rem;
+}
+
+.nav-item {
+  margin: 1.5rem 0;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 768px) {
+  .personal-information::before {
+    height: 5rem;
+    background: url("img/wave-medium.png");
+    background-size: cover;
+  }
+
+  .skills {
+    padding-top: 20px;
+  }
+
+  .skills::before {
+    height: 7rem;
+    background: url("img/wave-medium-reversed.png");
+    background-size: cover;
+  }
+
+  .languages::before {
+    height: 5rem;
+    background: url("img/wave-medium.png");
+    background-size: cover;
+  }
+
+  header {
+    height: 8rem;
+  }
+
+  .nav-list {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction: row;
+    transition: initial;
+  }
+
+  .menu-icons {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 2.5rem;
+  }
+
+  .nav-link,
+  .current {
+    color: #fafafa;
+    position: relative;
+    font-size: 1.3rem;
+  }
+
+  .nav-link::before,
+  .current::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: #eb648c;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+  }
+
+  .current::before {
+    transform: scaleX(1);
+  }
+
+  .nav-link:hover::before {
+    transform: scaleX(1);
+  }
+
+  .skills div {
+    margin-top: 7rem;
+  }
+
+  .personal-information img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+/* personal information */
+.personal-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    ),
+    url("img/stars.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 2rem;
+}
+
+.personal-information::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 4.7rem;
+  background: url("img/wave-small.png") center no-repeat;
+  background-size: cover;
+}
+
+.personal-information table {
+  color: #fafafa;
+}
+
+.personal-information img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  border: 3px solid #eb648c;
+  margin: 2rem 0 2rem 3rem;
+}
+
+.personal-information td {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* education-information */
+.education-information {
+  text-align: center;
+  margin: 2rem;
+  padding: 1.5rem;
+}
+
+.education-information table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  color: #5f5f66;
+}
+
+/* about me */
+.adout-me {
+  height: 30rem;
+  padding: 5rem 3rem;
+  margin: 1rem;
+  text-align: center;
+  color: #fafafa;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+  background: url(img/200w.webp) center no-repeat;
+  background-size: cover;
+}
+
+.adout-me::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(49, 24, 131, 0.9) 0%,
+    rgba(72, 56, 149, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+.adout-me i {
+  color: #e7cea0;
+  font-size: 2rem;
+  margin: 0 0 20px;
+}
+
+.adout-me p {
+  font-size: 1.2rem;
+  margin: 0 0 20px;
+}
+
+/* skills */
+.skills {
+  width: 100%;
+  height: 95vh;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    ),
+    url("img/skills.png") center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 2rem;
+  color: #fafafa;
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 4.7rem;
+  background: url("img/wave-small-reversed.png");
+  background-size: cover;
+}
+
+.skills div {
+  margin-top: 5rem;
+}
+
+.skills h1 {
+  text-align: center;
+}
+
+.skills table {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+/* language */
+.languages {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    ),
+    url("img/languagewordle.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 2rem;
+  color: #fafafa;
+}
+
+.languages::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 4.7rem;
+  background: url("img/wave-small.png") center no-repeat;
+  background-size: cover;
+}
+
+.languages h1 {
+  text-align: center;
+}
+
+.languages table {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.languages th {
+  color: #eb648c;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* personal information */
+.personal-intrest i {
+  color: #e7cea0;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.personal-intrest {
+  text-align: center;
+}
+
+.personal-intrest-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 0.5rem;
+}
+
+.personal-intrest-item {
+  height: 40rem;
+  padding: 5rem;
+  margin: 1rem;
+  color: #fafafa;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.personal-intrest-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(49, 24, 131, 0.9) 0%,
+    rgba(72, 56, 149, 0.8) 100%
+  );
+  z-index: -1;
+}
+
+.study {
+  background: url("img/study.jfif") center no-repeat;
+  background-size: cover;
+}
+
+.sport {
+  background: url("img/sport.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.drow {
+  background: url("img/drowing.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.personal-intrest-item h2 {
+  color: #eb648c;
+  margin: 0 0 1.5rem;
+}
+
+.personal-intrest-item p {
+  font-size: 1.3rem;
+}
+
+footer {
+  padding: 2.5rem 0;
+  background-color: #d7d4ed;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-link a {
+  color: rgba(0, 0, 0, 0.7);
+}
+.footer-link a:hover {
+  color: #eb648c;
+}
+
+footer p {
+  direction: ltr;
+  font-size: 1rem;
+}
+
+/* media queries */
+@media screen and (min-width: 350px) {
+  .skills {
+    /* padding-top: 80px; */
+  }
+
+  .languages {
+    /* padding-top: 100px; */
+  }
+}
+/* @media screen and (min-width: 470px) {
+} */
+
+@media screen and (min-width: 950px) {
+  .personal-information::before {
+    height: 10rem;
+    background: url("img/wave-large.png");
+    background-size: cover;
+  }
+
+  .skills::before {
+    height: 10rem;
+    background: url("img/wave-large-reversed.png");
+    background-size: cover;
+  }
+
+  .languages::before {
+    height: 10rem;
+    background: url("img/wave-large.png");
+    background-size: cover;
+  }
+
+  .personal-information {
+    height: 110vh;
+  }
+
+  .personal-information img {
+    height: 13rem;
+    width: 13rem;
+  }
+
+  .table-personal-information- {
+    /* margin-top: 5rem; */
+    margin-bottom: 6rem;
+  }
+
+  .skills div {
+    margin-top: 7rem;
+  }
+
+  .education-information {
+    margin-top: -1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skills {
+    padding-top: 40px;
+  }
+}
