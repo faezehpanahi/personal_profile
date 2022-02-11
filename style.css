@@ -137,103 +137,20 @@ nav {
   color: rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (min-width: 768px) {
-  .personal-information::before {
-    height: 5rem;
-    background: url("img/wave-medium.png");
-    background-size: cover;
-  }
-
-  .skills {
-    padding-top: 20px;
-  }
-
-  .skills::before {
-    height: 7rem;
-    background: url("img/wave-medium-reversed.png");
-    background-size: cover;
-  }
-
-  .languages::before {
-    height: 5rem;
-    background: url("img/wave-medium.png");
-    background-size: cover;
-  }
-
-  header {
-    height: 8rem;
-  }
-
-  .nav-list {
-    width: initial;
-    height: initial;
-    background-color: transparent;
-    position: initial;
-    top: initial;
-    right: initial;
-    flex-direction: row;
-    transition: initial;
-  }
-
-  .menu-icons {
-    display: none;
-  }
-
-  .nav-item {
-    margin: 0 2.5rem;
-  }
-
-  .nav-link,
-  .current {
-    color: #fafafa;
-    position: relative;
-    font-size: 1.3rem;
-  }
-
-  .nav-link::before,
-  .current::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    background-color: #eb648c;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 650ms;
-  }
-
-  .current::before {
-    transform: scaleX(1);
-  }
-
-  .nav-link:hover::before {
-    transform: scaleX(1);
-  }
-
-  .skills div {
-    margin-top: 7rem;
-  }
-
-  .personal-information img {
-    height: 10rem;
-    width: 10rem;
-  }
-}
 /* personal information */
 .personal-information {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: linear-gradient(
       135deg,
       rgba(49, 24, 131, 0.9) 0%,
       rgba(72, 56, 149, 0.8) 100%
     ),
-    url("img/stars.jpg") center no-repeat;
+    url("./img/stars.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   padding: 2rem;
@@ -246,7 +163,7 @@ nav {
   bottom: -3px;
   width: 100%;
   height: 4.7rem;
-  background: url("img/wave-small.png") center no-repeat;
+  background: url("./img/wave-small.png") center no-repeat;
   background-size: cover;
 }
 
@@ -255,11 +172,11 @@ nav {
 }
 
 .personal-information img {
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 100%;
   border: 3px solid #eb648c;
-  margin: 2rem 0 2rem 3rem;
+  margin: 4rem 0 2rem 1rem;
 }
 
 .personal-information td {
@@ -293,7 +210,7 @@ nav {
   position: relative;
   cursor: pointer;
   z-index: 0;
-  background: url(img/200w.webp) center no-repeat;
+  background: url(./img/200w.webp) center no-repeat;
   background-size: cover;
 }
 
@@ -332,7 +249,7 @@ nav {
       rgba(49, 24, 131, 0.9) 0%,
       rgba(72, 56, 149, 0.8) 100%
     ),
-    url("img/skills.png") center no-repeat;
+    url("./img/skills.png") center no-repeat;
   background-size: cover;
   position: relative;
   padding: 2rem;
@@ -346,7 +263,7 @@ nav {
   left: 0;
   width: 100%;
   height: 4.7rem;
-  background: url("img/wave-small-reversed.png");
+  background: url("./img/wave-small-reversed.png");
   background-size: cover;
 }
 
@@ -375,7 +292,7 @@ nav {
       rgba(49, 24, 131, 0.9) 0%,
       rgba(72, 56, 149, 0.8) 100%
     ),
-    url("img/languagewordle.jpg") center no-repeat;
+    url("./img/languagewordle.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   padding: 2rem;
@@ -389,7 +306,7 @@ nav {
   bottom: -3px;
   width: 100%;
   height: 4.7rem;
-  background: url("img/wave-small.png") center no-repeat;
+  background: url("./img/wave-small.png") center no-repeat;
   background-size: cover;
 }
 
@@ -457,17 +374,17 @@ nav {
 }
 
 .study {
-  background: url("img/study.jfif") center no-repeat;
+  background: url("./img/study.jfif") center no-repeat;
   background-size: cover;
 }
 
 .sport {
-  background: url("img/sport.jpg") center no-repeat;
+  background: url("./img/sport.jpg") center no-repeat;
   background-size: cover;
 }
 
 .drow {
-  background: url("img/drowing.jpg") center no-repeat;
+  background: url("./img/drowing.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -518,22 +435,107 @@ footer p {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .personal-information::before {
+    height: 5rem;
+    background: url("./img/wave-medium.png");
+    background-size: cover;
+  }
+
+  .skills {
+    padding-top: 20px;
+  }
+
+  .skills::before {
+    height: 7rem;
+    background: url("./img/wave-medium-reversed.png");
+    background-size: cover;
+  }
+
+  .languages::before {
+    height: 5rem;
+    background: url("./img/wave-medium.png");
+    background-size: cover;
+  }
+
+  header {
+    height: 8rem;
+  }
+
+  .nav-list {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction: row;
+    transition: initial;
+  }
+
+  .menu-icons {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 2.5rem;
+  }
+
+  .nav-link,
+  .current {
+    color: #fafafa;
+    position: relative;
+    font-size: 1.3rem;
+  }
+
+  .nav-link::before,
+  .current::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: #eb648c;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+  }
+
+  .current::before {
+    transform: scaleX(1);
+  }
+
+  .nav-link:hover::before {
+    transform: scaleX(1);
+  }
+
+  .skills div {
+    margin-top: 7rem;
+  }
+
+  .personal-information img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
 @media screen and (min-width: 950px) {
   .personal-information::before {
     height: 10rem;
-    background: url("img/wave-large.png");
+    background: url("./img/wave-large.png");
     background-size: cover;
   }
 
   .skills::before {
     height: 10rem;
-    background: url("img/wave-large-reversed.png");
+    background: url("./img/wave-large-reversed.png");
     background-size: cover;
   }
 
   .languages::before {
     height: 10rem;
-    background: url("img/wave-large.png");
+    background: url("./img/wave-large.png");
     background-size: cover;
   }
 
