@@ -144,7 +144,7 @@ nav {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   background: linear-gradient(
       135deg,
       rgba(49, 24, 131, 0.9) 0%,
@@ -341,12 +341,12 @@ nav {
 
 .personal-intrest-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 0.5rem;
 }
 
 .personal-intrest-item {
-  height: 40rem;
+  /* height: 40rem; */
   padding: 5rem;
   margin: 1rem;
   color: #fafafa;
@@ -433,6 +433,12 @@ footer div {
 footer p {
   direction: ltr;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .personal-intrest-items {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -540,7 +546,7 @@ footer p {
   }
 
   .personal-information {
-    height: 110vh;
+    height: 130vh;
   }
 
   .personal-information img {
